@@ -42,3 +42,6 @@ ros2 launch realsense2_camera rs_launch.py
 - /parameter_events
 - /rosout
 - /tf_static
+
+## Depth camera test
+![img1](/photos/1.png)
