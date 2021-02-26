@@ -15,8 +15,8 @@ ROS2 + NVIDIA Jetson + Intel RealSense
 
 ## How to get started
 Run RealSense node in ROS2
-'''
+```
 source /opt/ros/foxy/setup.bash
 source ~/ros2_ws/install/local_setup.bash
 ros2 launch realsense2_camera rs_launch.py
-'''
+```
