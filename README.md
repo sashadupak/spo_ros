@@ -12,3 +12,11 @@ ROS2 + NVIDIA Jetson + Intel RealSense
 3. Обеспечение работы с использованием ROS2 (Наладка зависимостей и версий, обновление пакетов)
 4. Решение типичных задач c использованием компьютерного зрения и нейронных сетей
 5. Внедрение полученных результатов для позиционирования робота-художника и построения траекторий движения рабочего инструмента.
+
+## How to get started
+Run RealSense node in ROS2
+'''
+source /opt/ros/foxy/setup.bash
+source ~/ros2_ws/install/local_setup.bash
+ros2 launch realsense2_camera rs_launch.py
+'''
