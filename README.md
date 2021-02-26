@@ -44,7 +44,7 @@ ros2 launch realsense2_camera rs_launch.py
 - /tf_static
 
 ## Depth camera test
-![img1](/photos/2d.png)
-![img2](/photos/3d.png)
+![img1](/photos/2d_c1.png)
+![img2](/photos/3d_c.png)
 
 
