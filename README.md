@@ -1,7 +1,7 @@
 # Реализация алгоритмов компьютерного зрения и искуственного интеллекта с использованием платформы NVIDIA Jetson
 ROS2 + NVIDIA Jetson + Intel RealSense
 
-# Задачи
+## Задачи
 1. Исследование сфер применения платформы NVIDIA Jetson
 - Skydio
 - AlphaPilot AI
