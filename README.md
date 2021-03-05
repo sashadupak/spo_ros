@@ -46,7 +46,7 @@ ros2 launch realsense2_camera rs_launch.py
 ## Camera test
 ![img1](/photos/2d_c1.jpg)
 
-## Dangerous signs detection in realtime
+## Dangerous sign detection in realtime
 ![img2](/photos/corrosive.jpeg)
 
 
