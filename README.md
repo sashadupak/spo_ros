@@ -47,7 +47,7 @@ ros2 launch realsense2_camera rs_launch.py
 ![img1](/photos/2d_c1.jpg)
 
 ## Dangerous sign detection in realtime
-![img2](/photos/corrosive.jpeg)
+![img2](/photos/corrosive.jpeg, width=100)
 
 ## TODO
 - распечатать крепление камеры
