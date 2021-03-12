@@ -49,4 +49,8 @@ ros2 launch realsense2_camera rs_launch.py
 ## Dangerous sign detection in realtime
 ![img2](/photos/corrosive.jpeg)
 
-
+## TODO
+- распечатать крепление камеры
+- сделать модель схвата для кисти
+- залить Subscriber'а на Jetson
+- Распознавание кривизны натяжения холста
