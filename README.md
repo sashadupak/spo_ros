@@ -43,8 +43,12 @@ ros2 launch realsense2_camera rs_launch.py
 - /rosout
 - /tf_static
 
+## Our topic (just 1 yet)
+- /object_detection/output
+
+
 ## TODO
-- распечатать крепление камеры
+- распечатать крепление камеры (2 варианта)
 - сделать модель схвата для кисти
-- залить Subscriber'а на Jetson
+~~- залить Subscriber'а на Jetson~~
 - Распознавание кривизны натяжения холста
