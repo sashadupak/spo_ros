@@ -43,13 +43,13 @@ ros2 launch realsense2_camera rs_launch.py
 - /rosout
 - /tf_static
 
-## Our topic (just 1 yet)
-- /object_detection/output
+## Nodes and published topics:
+### detector_node ### 
+- /object_detection/coords - posts corners coordinates of the canvas
+- /object_detection/output - visual reprsentation contour's canvas
+### depth_node ###
+- /depth_node/canvas_average_depth - publishes average depth inside the canvas
+### pcd_subscriber_node ###
+- tbd - will publish canvas coordinates in LCS (local coordinate system)
 
-
-## TODO
-- распечатать крепление камеры (2 варианта)
-- сделать модель схвата для кисти
-
-~~- залить Subscriber'а на Jetson~~
-- Распознавание кривизны натяжения холста
+![alt text](https://github.com/sdupak/spo_ros/blob/8bbf452c9503f4b53fb9f7da07095b3bf7737512/photos/rqt_graph.png)
