@@ -1,6 +1,5 @@
 '''
 Functions for working with PointCloud2.
-source https://github.com/Mo-637/ROS2-KITTI-Preprocessing
 '''
 __docformat__ = "restructuredtext en"
 
