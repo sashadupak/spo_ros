@@ -1,55 +1,58 @@
-# Реализация алгоритмов компьютерного зрения и искуственного интеллекта с использованием платформы NVIDIA Jetson
-ROS2 + NVIDIA Jetson + Intel RealSense
+# Позиционирование для робота-художника
+## Описание
+Приложение публикует в ros2 топик /result список из 4 пар координат холста в локальной системе координат 
 
-## Задачи
+## Технологии
+* ROS2
+* NVIDIA Jetson
+* Intel RealSense
+
+## Задачи проекта
 1. Исследование сфер применения платформы NVIDIA Jetson
-- Skydio
-- AlphaPilot AI
 2. Тестирование взаимодействия с RealSense
 - Обработка изображения
-- обнаружение объектов
-- стерео зрение
+- Обнаружение объектов
 3. Обеспечение работы с использованием ROS2 (Наладка зависимостей и версий, обновление пакетов)
-4. Решение типичных задач c использованием компьютерного зрения и нейронных сетей
-5. Внедрение полученных результатов для позиционирования робота-художника и построения траекторий движения рабочего инструмента.
+4. Внедрение полученных результатов для позиционирования робота-художника .
 
-## How to get started
-Run RealSense node in ROS2
+## Пререквизиты
+* ROS2
+* ROS2 realsense wrapper `https://github.com/IntelRealSense/realsense-ros`
+* Python (numpy, opencv)
+
+## Установка
+Установите зависимостей для python
 ```
-source /opt/ros/foxy/setup.bash
-source ~/ros2_ws/install/local_setup.bash
-ros2 launch realsense2_camera rs_launch.py
+pip install -r requirements.txt
+```
+Клонируйте репозиторий в папку src в своем ROS2 рабочем пространстве
+```
+cd ~/ros2_ws/src
+git clone https://github.com/sdupak/spo_ros
+```
+Установите необходимые зависимости
+```
+cd ..
+rosdep install -i --from-path src --rosdistro <distro> -y
+```
+Соберите и актуализируйте директории, где ROS ищет установленные пакеты
+```
+colcon build --packages-select mypack
+source install/setup,bash
 ```
 
-## Published Topics
-- /camera/accel/imu_info
-- /camera/color/camera_info
-- /camera/color/image_raw
-- /camera/depth/camera_info
-- /camera/depth/color/points
-- /camera/depth/image_rect_raw
-- /camera/extrinsics/depth_to_color
-- /camera/extrinsics/depth_to_infra1
-- /camera/extrinsics/depth_to_infra2
-- /camera/gyro/imu_info
-- /camera/imu
-- /camera/infra1/camera_info
-- /camera/infra1/image_rect_raw
-- /camera/infra2/camera_info
-- /camera/infra2/image_rect_raw
-- /camera/parameter_events
-- /camera/rosout
-- /parameter_events
-- /rosout
-- /tf_static
 
-## Nodes and published topics:
-### detector_node ### 
-- /object_detection/coords - posts corners coordinates of the canvas
-- /object_detection/output - visual reprsentation contour's canvas
-### depth_node ###
-- /depth_node/canvas_average_depth - publishes average depth inside the canvas
-### pcd_subscriber_node ###
-- tbd - will publish canvas coordinates in LCS (local coordinate system)
+## Запуск
+Запустите ноду realsense со следующими параметрами
+```
+ros2 launch realsense2_camera rs_launch.py enable_pointcloud:=true align_depth:=true filters:=spatial ordered_pc:=true device_type:=d435i
+```
+Запустите приложение
+```
+ros2 run mypack start
+```
 
+## Ноды и публикуемые топики:
+[documentation](/mypack/html/index.html)
 ![alt text](https://github.com/sdupak/spo_ros/blob/8bbf452c9503f4b53fb9f7da07095b3bf7737512/photos/rqt_graph.png)
+## 
