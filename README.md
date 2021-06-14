@@ -4,24 +4,24 @@
 
 ## Технологии
 * ROS2
-* NVIDIA Jetson
+* NVIDIA Jetson nano
 * Intel RealSense
 
 ## Задачи проекта
 1. Исследование сфер применения платформы NVIDIA Jetson
 2. Тестирование взаимодействия с RealSense
-- Обработка изображения
-- Обнаружение объектов
-3. Обеспечение работы с использованием ROS2 (Наладка зависимостей и версий, обновление пакетов)
-4. Внедрение полученных результатов для позиционирования робота-художника .
+3. Обработка изображения
+4. Обнаружение объектов
+5. Обеспечение работы с использованием ROS2 (Наладка зависимостей и версий, обновление пакетов)
+6. Внедрение полученных результатов для позиционирования робота-художника .
 
 ## Пререквизиты
 * ROS2
-* ROS2 realsense wrapper `https://github.com/IntelRealSense/realsense-ros`
+* [ROS2 realsense wrapper](https://github.com/IntelRealSense/realsense-ros)
 * Python (numpy, opencv)
 
 ## Установка
-Установите зависимостей для python
+Установите зависимости для python
 ```
 pip install -r requirements.txt
 ```
@@ -52,7 +52,6 @@ ros2 launch realsense2_camera rs_launch.py enable_pointcloud:=true align_depth:=
 ros2 run mypack start
 ```
 
-## Ноды и публикуемые топики:
-[documentation](/mypack/html/index.html)
-![alt text](https://github.com/sdupak/spo_ros/blob/8bbf452c9503f4b53fb9f7da07095b3bf7737512/photos/rqt_graph.png)
+## [Ноды и публикуемые топики:](https://ilvif666.github.io/)
+![alt text](https://raw.githubusercontent.com/sdupak/spo_ros/8bbf452c9503f4b53fb9f7da07095b3bf7737512/photos/rqt_graph.png)
 ## 
