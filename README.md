@@ -38,7 +38,7 @@ rosdep install -i --from-path src --rosdistro <distro> -y
 Соберите и актуализируйте директории, где ROS ищет установленные пакеты
 ```
 colcon build --packages-select mypack
-source install/setup,bash
+source install/setup.bash
 ```
 
 
